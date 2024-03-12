@@ -3,7 +3,7 @@ abstract class Animal {
 }
 
 class Dog extends Animal {
-  constructor(private readonly name: string) {
+  constructor(readonly name: string) {
       super();
   }
   makeNoise(): void {
@@ -12,11 +12,10 @@ class Dog extends Animal {
 }
 
 class Cat extends Dog {
-  private years: number;
-
-  constructor(private readonly name: string, years: number) {
-      super();
-      this.years = years
+  private years: number
+  constructor(readonly name:string, years: number) {
+      super(name);
+      this.years = years;
   }
   sayYears(): void {
       console.log(`${this.name} have a ${this.years} years.`)
@@ -29,8 +28,6 @@ dog.makeNoise();
 const cat = new Cat('millene', 24)
 cat.makeNoise();
 cat.sayYears();
-
-/* Se não for definido a tipagem o proprio TS faz a tipagem de acordo com o type do valor recebido. */
 
 const Pessoa = {
   nome: 'manaure',
