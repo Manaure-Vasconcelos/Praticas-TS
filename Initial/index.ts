@@ -4,35 +4,38 @@ abstract class Animal {
 
 class Dog extends Animal {
   constructor(readonly name: string) {
-      super();
+    super();
   }
   makeNoise(): void {
-      console.log(`${this.name} is barking`);
+    console.log(`${this.name} is barking`);
   }
 }
 
 class Cat extends Dog {
-  private years: number
-  constructor(readonly name:string, years: number) {
-      super(name);
-      this.years = years;
+  private years: number;
+  constructor(
+    readonly name: string,
+    years: number,
+  ) {
+    super(name);
+    this.years = years;
   }
   sayYears(): void {
-      console.log(`${this.name} have a ${this.years} years.`)
+    console.log(`${this.name} have a ${this.years} years.`);
   }
 }
 
-const dog = new Dog('manaure')
+const dog = new Dog('manaure');
 dog.makeNoise();
 
-const cat = new Cat('millene', 24)
+const cat = new Cat('millene', 24);
 cat.makeNoise();
 cat.sayYears();
 
 const Pessoa = {
   nome: 'manaure',
   sobrenome: 'vasconcelos',
-  idade: 26
-}
+  idade: 26,
+};
 
-console.log(Pessoa)
+console.log(Pessoa);
