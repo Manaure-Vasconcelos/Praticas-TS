@@ -3,7 +3,7 @@
 
 // Pode ser usado para fazer uma checagem inversa.
 // Checa se é undefined / ja teve origem undefined do próprio código.
-let x;
+export let x;
 if (typeof x === 'undefined') x = 20;
 console.log(x * 2);
 
