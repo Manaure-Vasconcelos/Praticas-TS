@@ -20,7 +20,7 @@ console.log(showMessage2(2024));
 
 // Unknown
 
-let x; // declarado como any pode receber qualquer valor que não da erro
+export let x; // declarado como any pode receber qualquer valor que não da erro
 x = 500;
 x = 'Manaure';
 x = '10';
